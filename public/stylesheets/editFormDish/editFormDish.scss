@@ -1,0 +1,77 @@
+
+header {
+  height: 10vh;
+}
+
+main {
+  background-image: url("/images/assets/bg-3.jpg");
+  background-size: cover;
+  min-height: 85vh;
+  
+}
+
+footer {
+  height: 152px;
+}
+
+.section1 {
+  padding: 10vh 0 14vh 0;
+
+  .cuadro {
+    margin-top: 5rem;
+    width: clamp(270px, 90vw, 500px);
+    padding: 5vh 0;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 10px;
+
+    form {
+      width: 90%;
+    }
+
+    input {
+      padding: 0.2rem 0.5rem;
+      width: 100%;
+      border-color: blue;
+      border-radius: 10px;
+    }
+
+    textarea {
+      border-color: blue;
+      border-radius: 10px;
+    }
+
+    .number {
+      width: 60%;
+    }
+
+    label {
+      width: 35%;
+      padding: 0.2rem 0.5rem;
+      background-color: white;
+      border: 2px solid blue;
+      color: black;
+      border-radius: 10px;
+    }
+  }
+
+
+  button {
+    background-color: #29398E;
+    color: white;
+    width: 40%;
+    border-radius: 20px;
+    border-color: #29398E;
+  }
+
+  button {
+    width: 30%;
+  }
+
+  a {
+    width: 30%;
+
+    button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+<%- include('head') %> <!-- vista que me abre todo el cascarón -->
+<!-- CSS Propio-->
+<link rel="stylesheet" href="/stylesheets/register/formRegister.css">
+<title>Formulario creación restaurante</title>
+<%- include('navbar') %> 
+
+  <main class="container-fluid">
+    <section class="section1 d-flex justify-content-center align-items-center">
+      <div class="cuadro d-flex flex-column align-items-center gap-4">
+          <form 
+            class="d-flex flex-column gap-4"
+            action="/restaurant/register" 
+            method="post" 
+            enctype="multipart/form-data">
+            <input 
+              type="text"
+              name="restaurant_name"
+              placeholder="Nombre del restaurante"
+            >
+            <input 
+              type="text"
+              name="cook_style"
+              placeholder="Estilo de cocina"
+            >
+            <textarea 
+              name="restaurant_description"
+              placeholder="Descripción del restaurante"
+              rows="5"  
+              cols="50"
+            ></textarea>
+            <div>
+              <input 
+                class="number me- mb-2" 
+                type="text"
+                name="phone_number"
+                placeholder="número de teléfono"
+              >
+              <label class="text-center" for="file">Upload</label>
+              <input 
+                id="file"
+                type="file"
+                name="img"
+                hidden
+              >
+            </div>
+          <input 
+            type="email"
+            name="email"
+            placeholder="Introduzca su correo electrónico"
+          >
+          <input 
+            type="password"
+            name="password"
+            placeholder="Introduzca la contraseña"
+          >
+          <input 
+            type="password"
+            name="password2"
+            placeholder="Vuelva a introducir la misma contraseña"
+          >
+            <h5><%= typeof message != 'undefined'? message : null %></h5>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-primary">Aceptar</button>
+              <a href="/"><button class="btn btn-primary" type="button">Cancelar</button></a>
+              <button class="btn btn-primary" type="reset">Limpiar</button>
+            </div>
+          </form>
+      </div>
+    </section>
+  </main>
+
+<%- include('footer') %>

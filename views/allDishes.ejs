@@ -1,0 +1,34 @@
+<%- include('head') %>
+<link rel="stylesheet" href="/stylesheets/allDishes/allDishes.css">
+<title>Platos</title>
+<%- include('navbar') %>
+
+<main>
+  <section class="container-fluid section2">
+      <h2 class="text-center">Algunos de nuestros platos</h2>
+      <div class="row d-flex justify-content-center">
+        <% result.forEach( elem => { %>
+          <div class="cuadro1 justify-content-center">
+            <div class="dish d-flex flex-column align-items-center gap-2">
+              <img src="/images/dish/<%= elem.dish_img %>" alt="imagen"/>
+              <div class="bajo-imagen d-flex flex-column gap-3">
+                <h4><%= elem.dish_name %></h4>
+                <p><%= elem.dish_description %></p>
+               <!--  <div>
+                  <a href="/dish/deleteDish/<%= elem.dish_id %>/<%= elem.restaurant_id %>" class="btn btn-primary">Borrar</a>
+                  <a href="/dish/editDish/<%= elem.dish_id %>" class="btn btn-primary">Editar</a>
+                </div> -->
+                <a 
+                  href="/restaurant/oneRestaurant/<%= elem.restaurant_id %>" class="btn btn-primary boton">Restaurante
+                </a>
+              </div>
+            </div>          
+          </div>
+        <% }) %>
+    </div>
+  </section>
+  <a class="d-flex justify-content-center mb-5" href="/"><button>Volver a Inicio</button></a>
+</main>
+
+
+<%- include('footer') %>

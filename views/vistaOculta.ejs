@@ -1,0 +1,53 @@
+<%- include('head') %> <!-- vista que me abre todo el cascarón -->
+<!-- CSS Propio-->
+<link rel="stylesheet" href="/stylesheets/vistaOculta/vistaOculta.css">
+<title>Vista Oculta</title>
+<%- include('navbar') %> 
+
+<main>
+  <!-- Sección Restaurantes -->
+  <section class="container-fluid section1">
+    <h2 class="text-center mt-4">Vista Administrador</h2>
+    <h2 class="text-center">Restaurantes</h2>
+    <div class="row d-flex justify-content-center">
+        <% restaurants.forEach(elem => { %>
+          <div class="size col-12 col-md-4 col-xl-2 justify-content-center">  
+              <div class="restaurant d-flex flex-column align-items-start gap-2">
+                <img src="/images/restaurant/<%= elem.restaurant_img %>" alt="imagen">
+                <div class="bajo-imagen d-flex flex-column gap-3">
+                  <h4><%= elem.restaurant_name %></h4>
+                  <p>Estilo <%= elem.cook_style %></p>
+                  <div>
+                    <a href="/hidden/deleteRestaurant/<%= elem.restaurant_id %>"><button class="btn btn-primary">Eliminar</button></a>
+                    <a href="/hidden/deleteRestaurantLogic/<%= elem.restaurant_id %>"><button class="btn btn-primary">Desactivar</button></a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        <% }) %>
+      </div>
+  </section>
+  <!-- Seccion Platos -->
+  <section class="container-fluid section2">
+    <h2 class="text-center">Platos</h2>
+    <div class="row d-flex justify-content-center">
+      <% dishes.forEach( elem => { %>
+        <div class="cuadro1 justify-content-center">
+          <div class="dish d-flex flex-column align-items-center gap-2">
+            <img src="/images/dish/<%= elem.dish_img %>" alt="imagen"/>
+            <div class="bajo-imagen d-flex flex-column gap-3">
+              <h4><%= elem.dish_name %></h4>
+              <p><%= elem.dish_description %></p>
+              <div>
+                <a href="/hidden/deleteDish/<%= elem.dish_id %>/<%= elem.restaurant_id %>" class="btn btn-primary mb-2">Borrar</a>
+                <a href="/hidden/deleteLogicDish/<%= elem.dish_id %>/<%= elem.restaurant_id %>" class="btn btn-primary mb-2">Desactivar</a>
+              </div>
+            </div>
+          </div>          
+        </div>
+      <% }) %>
+  </div>
+</section>
+</main>
+
+<%- include('footer') %>

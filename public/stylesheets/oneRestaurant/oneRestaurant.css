@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+.section1 {
+  margin-top: 2rem;
+  padding: 19vh 10vw 0 10vw;
+}
+.section1 .cuadro {
+  color: white;
+  width: 100%;
+}
+.section1 .cuadro .izq {
+  background-color: #3F1F1D;
+  padding: 40px 35px;
+}
+.section1 .cuadro hr {
+  opacity: 1;
+  width: 80%;
+  border-top: 2px solid white;
+  right: -120px;
+}
+.section1 .cuadro .der {
+  background-color: #42221f;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.section1 .cuadro img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(250px, 35vw, 550px);
+}
+.section1 .cuadro button {
+  background-color: rgba(246, 235, 236, 0.6);
+  color: #3F1F1D;
+  border-color: #3F1F1D;
+  font-weight: bold;
+}
+.section1 .cuadro button:hover {
+  background-color: blue;
+  color: white;
+}
+
+.section2 {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.section2 h2 {
+  font-size: 4rem;
+  font-family: "Ephesis", sans-serif;
+  font-weight: bold;
+}
+.section2 .cuadro1 {
+  width: 350px;
+}
+.section2 img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+}
+.section2 .restaurant {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  background-color: #3F1F1D;
+}
+.section2 .restaurant:hover {
+  outline: 0.05rem solid #70C6B0;
+  transform: scale(1.05);
+}
+.section2 .bajo-imagen {
+  padding: 1vw;
+  color: white;
+}
+.section2 a {
+  background-color: rgba(246, 235, 236, 0.6);
+  color: #3F1F1D;
+  border-color: #3F1F1D;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+a button {
+  background-color: rgba(246, 235, 236, 0.6);
+  color: #3F1F1D;
+  border-color: #3F1F1D;
+  font-weight: bold;
+}
+
+@media (width <= 1200px) {
+  .section1 {
+    padding: 17vh 5vw 0 5vw;
+  }
+  .section1 .der {
+    padding: 2vh 0 2vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .section1 .der img {
+    border-radius: 20px;
+    position: static;
+    width: clamp(250px, 35vw, 550px); /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    transform: none; /* Elimina la transformación aplicada anteriormente */
+  }
+}/*# sourceMappingURL=oneRestaurant.css.map */

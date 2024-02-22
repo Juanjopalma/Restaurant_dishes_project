@@ -1,0 +1,16 @@
+header {
+  position: fixed;
+  z-index: 100;
+  top: 0%;
+  width: 100%;
+}
+header nav {
+  background-color: rgba(173, 153, 154, 0.6);
+}
+header nav .nav-link {
+  color: white !important;
+  font-size: 1.3rem;
+}
+header nav .nav-link:hover {
+  color: blue !important;
+}/*# sourceMappingURL=navbar.css.map */

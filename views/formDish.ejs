@@ -1,0 +1,46 @@
+<%- include('head') %> <!-- vista que me abre todo el cascarón -->
+<!-- CSS Propio-->
+<link rel="stylesheet" href="/stylesheets/formDish/formDish.css">
+<title>Formulario creación plato</title>
+<%- include('navbar') %> 
+
+  <main>
+    <section class="container-fluid section1">
+      <div class="d-flex justify-content-center">
+        <div class="cuadro d-flex flex-column align-items-center gap-4">
+          <img src="/images/assets/logo-user.png" alt="logo user">
+          <form 
+            class="d-flex flex-column gap-4"
+            action="/dish/createDish/<%= restaurant_id %> " 
+            method="post" 
+            enctype="multipart/form-data">
+            <input 
+              type="text"
+              name="dish_name"
+              placeholder="Nombre del plato"
+            >
+            <input 
+              type="text"
+              name="dish_description"
+              placeholder="Descripción del plato"
+            >
+            <label class="text-center" for="file">Subir</label>
+            <input 
+              id="file"
+              type="file"
+              name="img"
+              hidden
+            >
+            <h5><%= typeof message != 'undefined'? message : null %></h5>
+            <div class="d-flex justify-content-between">
+              <button class="btn btn-primary">Aceptar</button>
+              <a href="/restaurant/twoRestaurant/<%= restaurant_id %>"><button class="btn btn-primary" type="button">Cancelar</button></a>
+              <button class="btn btn-primary" type="reset">Limpiar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+<%- include('footer') %>

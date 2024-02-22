@@ -1,0 +1,59 @@
+<%- include('head') %> <!-- vista que me abre todo el cascarón -->
+<!-- CSS Propio-->
+<link rel="stylesheet" href="/stylesheets/hom/home.css">
+  <!-- Iconos de awesome -->
+  <title>Home</title>
+
+  <main>
+    <!-- Seccion Vídeo -->
+    <section class="section1">
+      <div class="contenedor-video">
+        <video 
+          class="video"
+          src="/images/assets/bg-principal.mp4" 
+          height="100vw" 
+          autoplay
+          loop
+          muted 
+        ></video>
+        <h1 class="titulo text-center">Bienvenid@s a nuestros restaurantes</h1>
+        
+        <nav class="navbar navbar-expand-lg d-flex justify-content-center">
+          <div class="d-flex">
+            <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+            <a class="nav-link" href="#section2">Restaurantes</a>
+            <a class="nav-link" href="/dish">Platos</a>
+          </div>
+          <div class="d-flex">
+            <a class="nav-link" href="/restaurant/login">Iniciar Sesión</a>
+            <a class="nav-link" href="/restaurant/register">Añadir Restaurante</a>
+          </div>
+        </nav>
+      </div>
+    </section>
+    <!-- Sección Restaurantes -->
+    <section class="container-fluid section2" id="section2">
+      <h2 class="text-center">Elija su restaurante</h2>
+      <div class="row d-flex justify-content-center">
+          <% result.forEach(elem => { %>
+            <div class="size col-12 col-md-4 col-xl-2 justify-content-center">  
+              <a class="text-decoration-none text-dark" href="/restaurant/oneRestaurant/<%= elem.restaurant_id %>">
+                <div class="restaurant d-flex flex-column align-items-start gap-2">
+                  <img src="/images/restaurant/<%= elem.restaurant_img %>" alt="imagen">
+                  <div class="bajo-imagen d-flex flex-column gap-3">
+                    <h4><%= elem.restaurant_name %></h4>
+                    <p>Estilo <%= elem.cook_style %></p>
+                    <!-- <p>Descripción: <%= elem.restaurant_description %></p>
+                    <p>Número de teléfono: <%= elem.phone_number %></p>
+                    <p>email: <%= elem.email %></p> -->
+                  </div>
+                </div>
+              </a>
+            </div>
+          <% }) %>
+        </div>
+    </section>
+  </main>
+
+<%- include('footer') %>
+

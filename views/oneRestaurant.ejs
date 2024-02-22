@@ -1,0 +1,63 @@
+<%- include('head') %> <!-- vista que me abre todo el cascarón -->
+<!-- CSS Propio-->
+<link rel="stylesheet" href="/stylesheets/home.css">
+<link rel="stylesheet" href="/stylesheets/oneRestaurant/oneRestaurant.css">
+<title>Restaurante</title>
+<%- include('navbar') %> 
+
+  <main>
+    <section class="container-fluid section1 d-flex justify-content-center">
+      <div class="row cuadro mb-5">
+        <div class="izq col-sm-12 col-md-6 d-flex flex-column align-items-end gap-3">
+          <h1><%= result[0].restaurant_name %></h1>
+          <hr>
+          <h2 class="text-end">Estilo de cocina <%= result[0].cook_style %></h2>
+          <p class="text-end"> <%= result[0].restaurant_description %></p>
+          <p class="text-end">Email: <%= result[0].email %></p>
+          <p class="text-end">Teléfono: <%= result[0].phone_number %></p>
+<!--           <div>
+            <a href="/restaurant/editRestaurant/<%= result[0].restaurant_id %>"><button class="btn btn-primary">Editar</button></a>
+
+            <a href="/restaurant/deleteRestaurant/<%= result[0].restaurant_id %>"><button class="btn btn-primary">Eliminar</button></a>
+  
+            <a href="/restaurant/deleteRestaurantLogic/<%= result[0].restaurant_id %>"><button class="btn btn-primary">Desactivar</button></a>
+            
+            <a href="/dish/createDish/<%= result[0].restaurant_id %> "><button class="btn btn-primary">Añadir plato</button></a>
+          </div> -->
+        </div>
+        <div class="der col-sm-12 col-md-6 d-flex justify-content-center">
+          <img 
+            src="/images/restaurant/<%= result[0].restaurant_img %>" alt="imagen"
+          >
+        </div>
+      </div>
+    </section>
+    <section class="section2">
+      <h2 class="text-center mb-5">Nuestros Platos</h2>
+      <div class="row d-flex justify-content-center">
+        <% result_d.forEach((elem) => { %>
+        <div class=" cuadro1 col-4 d-flex justify-content-center">
+            <div class="restaurant d-flex flex-column align-items-start gap-2">
+              <img 
+                src="/images/dish/<%= elem.dish_img %>" 
+                class="card-img-top" 
+                alt="plato"
+              >
+              <div class="bajo-imagen d-flex flex-column gap-3">
+                <h5><%= elem.dish_name %></h5>
+                <p><%= elem.dish_description %></p>
+                <p><%= elem.phone_number %></p>
+                <div>
+                  <!-- <a href="/dish/deleteDish/<%= elem.dish_id %>/<%= elem.restaurant_id %>" class="btn btn-primary mb-2">Borrar</a>
+                  <a href="/dish/editDish/<%= elem.dish_id %>" class="btn btn-primary mb-2">Editar</a> -->
+                </div>
+              </div>
+            </div>
+        </div>
+        <% }) %>
+      </div>
+    </section>
+    <a class="d-flex justify-content-center mb-5" href="/"><button>Volver a Inicio</button></a>
+  </main>
+
+<%- include('footer') %>

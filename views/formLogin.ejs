@@ -1,0 +1,45 @@
+<%- include('head') %>
+<!-- vista que me abre todo el cascarón -->
+<!-- CSS Propio-->
+<link
+	rel="stylesheet"
+	href="/stylesheets/login/formLogin.css"
+/>
+<title>Login</title>
+<%- include('navbar') %>
+
+<main class="container-fluid">
+	<section class="section1 row justify-content-center">
+		<div class="cuadro d-flex flex-column align-items-center gap-5">
+			<img
+				src="/images/assets/logo-user.png"
+				alt="logo user"
+			/>
+			<form
+				class="d-flex flex-column gap-4"
+				action="/restaurant/login"
+				method="post"
+			>
+				<input
+					type="text"
+					placeholder="Email"
+					name="email"
+				/>
+				<input
+					type="password"
+					placeholder="Contraseña"
+					name="password"
+				/>
+				<h5 style="color: black">
+					<%= typeof message != 'undefined'? message : null %>
+				</h5>
+				<div class="d-flex justify-content-center gap-4">
+					<button>Aceptar</button>
+					<a href="/"><button type="button">Cancelar</button></a>
+				</div>
+			</form>
+		</div>
+	</section>
+</main>
+
+<%- include('footer') %>

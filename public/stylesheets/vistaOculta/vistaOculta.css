@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+/* Sección Restaurantes*/
+.section1 {
+  background-color: white;
+  padding: 7vh 2vw 3vh 2vw;
+}
+.section1 h2 {
+  margin-bottom: 3rem;
+  font-family: "Ephesis", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.section1 img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+}
+.section1 .size {
+  width: 305px;
+}
+.section1 .restaurant {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+.section1 .restaurant:hover {
+  outline: 0.05rem solid #70C6B0;
+  transform: scale(1.05);
+}
+.section1 .bajo-imagen {
+  padding: 1vw;
+}
+.section1 a {
+  text-decoration: none;
+}
+.section1 a button {
+  background-color: rgba(246, 235, 236, 0.6);
+  color: #3F1F1D;
+  border-color: #3F1F1D;
+  font-weight: bold;
+}
+
+/* Sección Platos*/
+.section2 {
+  padding: 3vh 2vw 2vh 2vw;
+  background-size: cover;
+  overflow-x: hidden;
+}
+.section2 h2 {
+  margin: 3rem 0 3rem 0;
+  font-family: "Ephesis", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.section2 img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 100%;
+}
+.section2 .boton {
+  width: 250px;
+  margin: 0 0 0.5rem 0;
+}
+.section2 .cuadro1 {
+  width: 305px;
+}
+.section2 a {
+  background-color: rgba(246, 235, 236, 0.6);
+  color: #3F1F1D;
+  border-color: #3F1F1D;
+  font-weight: bold;
+}
+.section2 .dish {
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+  background-color: #3F1F1D;
+  color: white;
+}
+.section2 .dish:hover {
+  outline: 0.05rem solid #70C6B0;
+  transform: scale(1.05);
+}
+.section2 .bajo-imagen {
+  padding: 1vw;
+}
+
+a {
+  text-decoration: none;
+}
+a button {
+  background-color: rgba(246, 235, 236, 0.6);
+  color: #3F1F1D;
+  border-color: #3F1F1D;
+  font-weight: bold;
+}
+
+@media (width <= 768px) {
+  .section2 h2 {
+    margin: 6rem 0 3rem 0;
+  }
+}
+@media (width <= 380px) {
+  .section2 h2 {
+    margin: 10rem 0 3rem 0;
+  }
+}/*# sourceMappingURL=vistaOculta.css.map */

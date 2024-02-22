@@ -1,0 +1,64 @@
+header {
+  height: 10vh;
+}
+
+main {
+  background-image: url("/images/assets/bg-3.jpg");
+  background-size: cover;
+  min-height: 85vh;
+}
+
+footer {
+  height: 152px;
+}
+
+.section1 {
+  padding: 10vh 0 14vh 0;
+}
+.section1 .cuadro {
+  margin-top: 5rem;
+  width: clamp(270px, 90vw, 500px);
+  padding: 5vh 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}
+.section1 .cuadro form {
+  width: 90%;
+}
+.section1 .cuadro input {
+  padding: 0.2rem 0.5rem;
+  width: 100%;
+  border-color: blue;
+  border-radius: 10px;
+}
+.section1 .cuadro textarea {
+  border-color: blue;
+  border-radius: 10px;
+}
+.section1 .cuadro .number {
+  width: 60%;
+}
+.section1 .cuadro label {
+  width: 35%;
+  padding: 0.2rem 0.5rem;
+  background-color: white;
+  border: 2px solid blue;
+  color: black;
+  border-radius: 10px;
+}
+.section1 button {
+  background-color: #29398E;
+  color: white;
+  width: 40%;
+  border-radius: 20px;
+  border-color: #29398E;
+}
+.section1 button {
+  width: 30%;
+}
+.section1 a {
+  width: 30%;
+}
+.section1 a button {
+  width: 100%;
+}/*# sourceMappingURL=formDish.css.map */
