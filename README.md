@@ -12,7 +12,7 @@ Additionally, there is the administrator option with username: admin and passwor
    - git clone https://github.com/Juanjopalma/Proyecto_Restaurantes_Platos.git
 
 2. Move to the application folder:
-   - cd ...
+   - cd Proyecto Mitad de Bootcamp
      
 3. Install the dependencies:
    - npm i
