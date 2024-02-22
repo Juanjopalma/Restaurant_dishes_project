@@ -23,9 +23,6 @@ Additionally, there is the administrator option with username: admin and passwor
 5. enter in your browser
    - Local:   http://localhost:3003/
 
-View Project
-You can view the project by following link: 
-
 ## Videos 
-- You can see my explication of the project in the following link: 
+- You can see my explication of the project in the following link: https://youtu.be/-VjZED31g2c
 
